@@ -1,0 +1,10 @@
+.venv
+__pycache__
+*.pyc
+.uv-cache
+.env
+
+# Data artifacts
+data/chroma/
+data/*.parquet
+*.log

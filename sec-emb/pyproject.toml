@@ -1,0 +1,18 @@
+[project]
+name = "sec-emb"
+version = "0.1.0"
+description = "Securitize code embeddings & agentic RAG"
+requires-python = ">=3.10"
+dependencies = [
+    "chromadb>=0.5.20",
+    "langchain-text-splitters>=0.3.2",
+    "voyageai>=0.3.0",
+    "anthropic>=0.40.0",
+    "numpy>=1.26",
+    "pyarrow>=18.0.0",
+    "tqdm>=4.67.0",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.uv]
+package = false

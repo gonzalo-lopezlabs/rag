@@ -1,0 +1,110 @@
+[
+  {
+    "query": "endpoint to deploy a new ERC20 token with compliance configuration",
+    "expected": [
+      {"repo": "deployments-management-service", "path_contains": "controllers"}
+    ]
+  },
+  {
+    "query": "register a new investor and add their wallet",
+    "expected": [
+      {"repo": "abstraction_layer", "path_contains": "controllers"}
+    ]
+  },
+  {
+    "query": "issue tokens to an investor on Aptos",
+    "expected": [
+      {"repo": "bc-aptos-provider-svc", "path_contains": "token"}
+    ]
+  },
+  {
+    "query": "send and sign a Solana transaction",
+    "expected": [
+      {"repo": "bc-solana-provider-svc", "path_contains": "transaction"}
+    ]
+  },
+  {
+    "query": "bulk burn tokens on XRPL Ripple",
+    "expected": [
+      {"repo": "bc-xrpl-provider-svc", "path_contains": "token"}
+    ]
+  },
+  {
+    "query": "set investor lock on Algorand provider",
+    "expected": [
+      {"repo": "ds_algorand_provider", "path_contains": ""}
+    ]
+  },
+  {
+    "query": "compliance rules check before token transfer",
+    "expected": [
+      {"repo": "bc-aptos-provider-svc", "path_contains": "compliance"},
+      {"repo": "bc-solana-provider-svc", "path_contains": "compliance"},
+      {"repo": "bc-non-evm-provider-svc", "path_contains": "compliance"},
+      {"repo": "bc-xrpl-provider-svc", "path_contains": "compliance"},
+      {"repo": "dstoken", "path_contains": "compliance"}
+    ]
+  },
+  {
+    "query": "scan EVM blockchain events using web3",
+    "expected": [
+      {"repo": "blockchain-scanner", "path_contains": "providers/web3"}
+    ]
+  },
+  {
+    "query": "scan Solana program logs and emit events to listener",
+    "expected": [
+      {"repo": "blockchain-scanner", "path_contains": "providers/solana"}
+    ]
+  },
+  {
+    "query": "Aptos transaction parser and block scanner",
+    "expected": [
+      {"repo": "blockchain-scanner", "path_contains": "providers/aptos"}
+    ]
+  },
+  {
+    "query": "Solana whitelist program for token compliance",
+    "expected": [
+      {"repo": "bc-solana-whitelist-sc", "path_contains": ""},
+      {"repo": "bc-solana-whitelister", "path_contains": ""}
+    ]
+  },
+  {
+    "query": "bridge tokens between Solana and EVM chain",
+    "expected": [
+      {"repo": "bc-solana-bridge-sc", "path_contains": ""},
+      {"repo": "bc-securitize-bridge-sc", "path_contains": ""}
+    ]
+  },
+  {
+    "query": "redeem tokens for stablecoin via vault on Solana",
+    "expected": [
+      {"repo": "bc-solana-redemption-sc", "path_contains": ""},
+      {"repo": "bc-solana-vault-sc", "path_contains": ""}
+    ]
+  },
+  {
+    "query": "register a token in the on-chain registry",
+    "expected": [
+      {"repo": "bc-aptos-provider-svc", "path_contains": "registry"},
+      {"repo": "bc-solana-provider-svc", "path_contains": "registry"},
+      {"repo": "bc-xrpl-provider-svc", "path_contains": "registry"}
+    ]
+  },
+  {
+    "query": "blockchain transaction lock to prevent concurrent execution by same investor",
+    "expected": [
+      {"repo": "bc-aptos-provider-svc", "path_contains": "lock"},
+      {"repo": "bc-solana-provider-svc", "path_contains": "lock"},
+      {"repo": "bc-xrpl-provider-svc", "path_contains": "lock"},
+      {"repo": "bc-non-evm-provider-svc", "path_contains": "lock"}
+    ]
+  },
+  {
+    "query": "public async issueTokensCustom(\n    dsToken: string,\n    issuancePayload: IssueTokensRequestDTO,\n  ): Promise<PrepareTransactionResponseDTO> {\n    this.logger.debug({ service: TokenService.name, method: 'issueTokensCustom', dsToken, issuancePayload });\n    const { identity, to, value, issuanceTime, lock } = issuancePayload;",
+    "expected": [
+      {"repo": "bc-aptos-provider-svc", "path_contains": "token/token.service"}
+    ]
+  }
+]

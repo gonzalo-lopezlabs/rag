@@ -1,0 +1,12 @@
+[project]
+name = "sec-embeddings-py"
+version = "0.1.0"
+description = "Embeddings generation toolkit (Python)"
+requires-python = ">=3.9"
+dependencies = [
+    "sentence-transformers>=3.3.0",
+    "numpy>=1.26",
+]
+
+[tool.uv]
+package = false
